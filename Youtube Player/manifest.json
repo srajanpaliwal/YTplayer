@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "Youtube player",
+  "description": "Adds a Youtube player to all the tabs,make Playlists and control Playlist tab from other tabs ",
+  "version": "0.1",
+  "permissions":["storage", "tabs"],
+  "icons": { "128": "main_icon2.png"},
+  "web_accessible_resources": [
+				"script.js" ,
+				"playerscript.js",
+  				"player.html"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["myscript.js"],
+	  "css": ["mystyle.css"]
+    }
+  ],
+  "background": {
+    "scripts": ["back.js"]
+  },
+  "browser_action": {
+    "default_icon": "main_icon2.png"
+  }
+}
